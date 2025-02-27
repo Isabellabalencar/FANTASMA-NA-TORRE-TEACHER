@@ -71,7 +71,7 @@ function draw(){
     text("Fim de Jogo, pressione R para reiniciar", 230,250)
 
       // Reinicia o jogo quando o botão de restart é pressionado
-  if (keyDown("r") {
+  if (keyDown("r")) {
     reset();
   }
   }
