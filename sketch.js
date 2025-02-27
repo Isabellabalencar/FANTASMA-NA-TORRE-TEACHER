@@ -120,7 +120,7 @@ function reset() {
   // Reseta o estado do jogo para "PLAY"
   gameState = "PLAY";
 
-  // Destroi todos os obstáculos e nuvens
+  // Destroi todos os obstáculos
   climbersGroup.destroyEach();
   invisibleBlockGroup.destroyEach();
   doorsGroup.destroyEach();
