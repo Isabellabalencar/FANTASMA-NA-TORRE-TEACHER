@@ -68,7 +68,7 @@ function draw(){
     stroke("yellow");
     fill("yellow");
     textSize(30);
-    text("Fim de Jogo, pressione R para reiniciar", 230,250)
+    text("Fim de Jogo, pressione R para reiniciar", 30,250)
 
       // Reinicia o jogo quando o botão de restart é pressionado
   if (keyDown("r")) {
@@ -84,6 +84,7 @@ function spawnDoors() {
     var door = createSprite(200, -50);
     var climber = createSprite(200,10);
     var invisibleBlock = createSprite(200,15);
+    invisibleBlock.visible= false
     invisibleBlock.width = climber.width;
     invisibleBlock.height = 2;
     
