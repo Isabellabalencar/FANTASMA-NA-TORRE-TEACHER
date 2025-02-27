@@ -68,7 +68,12 @@ function draw(){
     stroke("yellow");
     fill("yellow");
     textSize(30);
-    text("Fim de Jogo", 230,250)
+    text("Fim de Jogo, pressione R para reiniciar", 230,250)
+
+      // Reinicia o jogo quando o botão de restart é pressionado
+  if (keyDown("r") {
+    reset();
+  }
   }
 
 }
@@ -104,9 +109,20 @@ function spawnDoors() {
     
     //adicione cada porta ao grupo
     doorsGroup.add(door);
-    invisibleBlock.debug = true;
+    invisibleBlock.debug = false;
     climbersGroup.add(climber);
     invisibleBlockGroup.add(invisibleBlock);
   }
+}
+
+function reset() {
+  // Reseta o estado do jogo para "PLAY"
+  gameState = "PLAY";
+
+  // Destroi todos os obstáculos e nuvens
+  climbersGroup.destroyEach();
+  invisibleBlockGroup.destroyEach();
+  doorsGroup.destroyEach();
+
 }
 
